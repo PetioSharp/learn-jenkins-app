@@ -17,8 +17,8 @@ pipeline {
                    npm ci
                    npm run build
                 '''
-
             }
+        }
 
         stage('Test') {
             agent {
@@ -26,17 +26,13 @@ pipeline {
                     image 'node:18-alpine'
                     reuseNode true
                 }
-                
             }
-
             steps {
                 sh '''
                 echo "Test stage"
                 npm test
                 '''
             }
-        }
-
         }
     }
 }
