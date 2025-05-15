@@ -11,11 +11,11 @@ pipeline {
             }
             steps {
                 sh '''
-                   ls -la
-                   node --version
-                   npm --version
-                   npm ci
-                   npm run build
+                    ls -la
+                    node --version
+                    npm --version
+                    npm ci
+                    npm run build
                 '''
             }
         }
@@ -29,8 +29,8 @@ pipeline {
             }
             steps {
                 sh '''
-                echo "Test stage"
-                npm test
+                    echo "Test stage"
+                    npm test
                 '''
             }
         }
